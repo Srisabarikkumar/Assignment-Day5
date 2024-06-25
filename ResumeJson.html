@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const resume = {
+        name: "Srisabarikkumar",
+        parentsName: {
+          father: "Marisamy",
+          mother: "Abirami",
+        },
+        age: 23,
+        email: "srisabarikkumar@gmail.com",
+        phone: "+919384269344",
+        skills: ["HTML", "CSS", "Javascript", "SQL"],
+        companies: [
+          {
+            name: "Wipro",
+            from: 2021,
+            to: 2024,
+          },
+        ],
+        education: [
+          {
+            qualification: "B.E ECE",
+            percentage: 78.9,
+            YOP: 2021,
+          },
+          {
+            qualification: "HSC",
+            percentage: 85.25,
+            YOP: 2017,
+          },
+          {
+            qualification: "SSLC",
+            percentage: 97.6,
+            YOP: 2015,
+          },
+        ],
+        certification: {
+          name: "Microsoft Azure Data Fundamentals(DP-900)",
+        },
+        personalDetails: {
+          DOB: "13.08.2000",
+          gender: "Male",
+          languagesKnown: ["English", "Tamil"],
+          hobbies: ["Playing", "Listening to songs", "Watching movies"],
+        },
+        strengths: [
+          "Flexible to learn",
+          "Highly motivated",
+          "positive attitude",
+        ],
+        declaration: {
+          content: `I hereby solemnly declare that all the above details furnished by me are true and correct 
+          to the best of my knowledge and conscience.`,
+        },
+      };
+
+      const objToArr = Object.keys(resume).map((key) => [key, resume[key]]);
+
+      // for loop
+      for (let i = 0; i < objToArr.length; i++) {
+        console.log(objToArr[i]);
+      }
+
+      // for in loop
+      for (const key in resume) {
+        console.log(`${key}: ${resume[key]}`);  
+      }
+
+      // for of loop
+      for (const key of objToArr) {
+        console.log(`${key}`);
+      }
+
+      // for each loop
+      objToArr.forEach((key) => console.log(key));
+    </script>
+  </body>
+</html>
